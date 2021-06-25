@@ -23,7 +23,6 @@ RUN set -ex; \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
-RUN dpkg-reconfigure locales
 
 COPY . /app
 RUN chmod +x /app/run.sh

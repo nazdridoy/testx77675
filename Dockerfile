@@ -26,8 +26,6 @@ RUN set -ex; \
 RUN dpkg-reconfigure locales
 
 COPY . /app
-RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
-RUN chmod +x /app/expect_vnc.sh
 
 CMD ["/app/run.sh"]

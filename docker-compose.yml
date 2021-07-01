@@ -1,6 +1,12 @@
 version: '3.3'
 services:
-    run:
+    tor-browser:
+        container_name: tor-browser
+        environment:
+            - TZ=Europe/London
+            - DISPLAY_WIDTH=1680
+            - DISPLAY_HEIGHT=1050
+            - KEEP_APP_RUNNING=1
         ports:
-            - '80:7526'
-        image: run
+            - '5800:5800'
+        image: domistyle/tor-browser
